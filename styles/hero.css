@@ -1,0 +1,91 @@
+.hero {
+  background: url(../assets/images/hero-background.png) center/cover;
+  width: 375px;
+  height: 464px;
+  position: relative;
+  animation: bg 3s backwards;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    width: 30%;
+    height: 70%;
+    filter: blur(250px);
+    background-color: var(--pink-low);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 30%;
+    height: 70%;
+    filter: blur(250px);
+    background-color: var(--pink-low);
+  }
+
+  & nav {
+    display: flex;
+    justify-content: space-between; 
+    max-width: var(--max-width);
+
+    & .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5.56rem;
+      height: 2.5rem;
+      background-color: var(--pink-dark);
+      border-radius: 8px;
+      & span {
+        color: var(--text);
+      }
+    }
+  }
+
+  
+}
+
+@keyframes bg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
+@media (width >=64rem) {
+  .hero {
+    width: 80rem;
+    height: 52.666rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 10%;
+      width: 30%;
+      height: 70%;
+      filter: blur(250px);
+      background-color: var(--pink-low);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10%;
+      right: 0;
+      width: 30%;
+      height: 70%;
+      filter: blur(250px);
+      background-color: var(--pink-low);
+    }
+
+    
+  }
+}

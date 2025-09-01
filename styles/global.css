@@ -29,26 +29,38 @@
   /* Font */
 
   --ff:"Raleway",sans-serif;
-  --title-lg:700 3rem var(--ff);
-  --title-md:700 2.5rem var(--ff);
-  --title-sm:700 2rem var(--ff);
-  --title-xs:700 1rem var(--ff);
-  --subtitle:500 2rem/2 var(--ff);
 
-  --body-lg-reg:400 1.25rem/1.4 var(--ff);
-  --body-lg-bold:700 1.25rem/1.4 var(--ff);
-  --body-md-reg:400 1rem/1.4 var(--ff);
-  --body-md-bold:700 1rem/1.4 var(--ff);
-  --body-sm-reg:400 0.875rem/1.4 var(--ff);
-  --body-sm-bold:700 0.875rem/1.4 var(--ff);
-  --body-xs-reg:400 0.75rem/1.4 var(--ff);
-  --body-xs-bold:700 0.75rem/1.4 var(--ff);
-  --button:700 0.875rem var(--ff);
-  --link:500 0.875rem var(--ff);
-  --tag: 700 0.625rem var(--ff);
+  --max-width:375px;
+
+  --py-sm:2rem;
+  --py-base:2.125rem;
+  --px-sm: 1.25rem;
+
 
 }
 
 body {
   font: var(--subtitle);
+  background-color: var(--shape-background);
+}
+
+a {
+  appearance: none;
+  text-decoration: none;
+}
+@media (min-width >=64) {
+  :root {
+    --max-width:
+  }
+}
+
+@media (width >=80em) {
+  :root {
+    --py-sm:6rem;
+    --py-base:3.5rem;
+    --px-sm:10rem;
+    --px-base:7.5rem;
+    --max-width:80em;
+
+  }
 }
