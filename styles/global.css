@@ -35,6 +35,7 @@
   --py-sm:2rem;
   --py-base:2.125rem;
   --px-sm: 1.25rem;
+  --gap:1rem;
 
 
 }
@@ -42,25 +43,38 @@
 body {
   font: var(--subtitle);
   background-color: var(--shape-background);
+  color: var(--text);
 }
 
 a {
   appearance: none;
   text-decoration: none;
 }
-@media (min-width >=64) {
+
+
+
+@media (min-width >=64rem) {
   :root {
-    --max-width:
+    --max-width:80rem;
+    margin-inline: auto;
   }
+}
+
+@media (width >=37.5rem) {
+  :root {
+    --py-base:2.5rem;
+    --px-sm:4rem;
+  } 
 }
 
 @media (width >=80em) {
   :root {
+    --gap:2rem;
     --py-sm:6rem;
     --py-base:3.5rem;
     --px-sm:10rem;
     --px-base:7.5rem;
-    --max-width:80em;
+    --max-width:120em;
 
   }
 }
