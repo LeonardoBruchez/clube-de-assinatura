@@ -40,6 +40,12 @@
 
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
 body {
   font: var(--subtitle);
   background-color: var(--shape-background);
