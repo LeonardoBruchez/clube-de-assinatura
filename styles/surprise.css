@@ -1,0 +1,267 @@
+section.mistery {
+  & >div:nth-child(1) {
+    margin-top: 14rem;
+    padding-block: 0.87rem;
+    opacity: 0;
+    animation: invisible 2s ease-in-out both;
+    height: 40vh;
+
+    & .mistery-container-mobile {
+        position: relative;
+        padding-block: 1rem;
+        width: 80%;
+        overflow: hidden;
+        margin: auto;
+        width: 380px;
+    }
+
+
+    & .mystery-spellbook-mobile{
+      position: absolute;
+      transform: rotate(15deg);
+      left: 67%;
+      top: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      animation: rotator 6s ease-in-out forwards infinite;
+    }
+
+    & .mystery-ouija-mobile {
+      position: absolute;
+      transform: rotate(-25deg);
+      left: 7%;
+      bottom: 3.7rem;
+      width: 2rem;
+      height: 2rem;
+      animation: rotator 6s linear forwards infinite;
+    }
+    & .mystery-crystal-mobile{
+      position: absolute;
+      bottom: 3.4rem;
+      transform: rotate(10deg);
+      right: 6%;
+      width: 2.5rem;
+      height: 2.5rem;
+      animation: rotator 6s linear forwards infinite;
+    }
+  
+    & h2{
+      margin: 5rem 1.25rem;
+      text-align: center;
+      font: 500 1rem/1.4 var(--ff);
+    }
+  }
+  }
+  
+
+
+@keyframes invisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotator {
+  
+  30% {
+    scale: 0.8;
+    rotate: 10deg;
+  }
+
+  70% {
+    scale: 1.1;
+  }
+  
+}
+
+
+@media (width >=64rem) {
+  section.mistery {
+    &:nth-child(2) {
+      margin: auto;
+      margin-top: 34rem;
+      height: 100vh;
+      
+      
+      & .mystery-container {
+        position: relative;
+        padding: 8rem 1rem 7rem;
+        width: 100%;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: auto;
+        
+        &:hover {
+          .mystery-spellbook {
+            scale: 1;
+            transition: scale 450ms ease 0s, rotate 200ms ease 0s;
+          }
+
+          & .mystery-ouija {
+            scale: 1;
+            transition: scale 450ms ease 750ms, rotate 350ms ease 0s;
+          }
+
+          & .mystery-crystal {
+            scale: 1;
+            transition: scale 450ms ease 1.4s, rotate 200ms ease 0s;
+          }
+          
+          & h2 span:nth-child(1) {
+            opacity: 1;
+            transition: opacity 350ms linear 0s;
+
+            & b {
+              color: var(--blue-light);
+              transition: color 350ms linear 0s;
+            }
+          }
+          
+          & h2 span:nth-child(2) {
+            opacity: 1;
+            transition: opacity 500ms linear 750ms;
+
+            & b {
+              color: var(--blue-light);
+              transition: color 500ms linear 750ms;
+            }
+          }
+          
+          & h2 span:nth-child(3) {
+            opacity: 1;
+            transition: opacity 500ms linear 1.4s;
+
+            & b {
+              color: var(--blue-light);
+              transition: color 500ms linear 1.4s;
+            }
+          }
+
+          
+        }
+
+        
+        & h2 span:nth-child(1) {
+          transition: opacity 450ms linear 1.4s;
+          
+          & b {
+            transition: color 450ms linear 1.4s;
+          }
+        }
+        
+        & h2 span:nth-child(2) {
+          transition: opacity 450ms linear 750ms;
+          
+          & b {
+            transition: color 450ms linear 750ms;
+          }
+        }
+        
+        & h2 span:nth-child(3) {
+          transition: opacity 500ms linear 0s;
+          
+          & b {
+            transition: color 450ms linear 0s;
+          }
+        }
+      }
+
+      & h2{
+        text-align: center;
+        display: block;
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+        overflow: hidden;
+          
+        margin: auto;
+
+      }
+
+      & span {
+      font: 500 1.5rem/1 var(--ff);
+       opacity: 0.3;
+      }
+  
+      & .mystery-spellbook {
+        position: absolute;
+        width: 5.5rem;
+        height: 5.5rem;
+        top: 2rem;
+        left: 50%;
+        scale: 0;
+        transition: scale 450ms ease 1.4s, rotate 200ms ease 1.4s;
+        z-index: 1;
+
+        &:hover {
+          scale: 1.1;
+          rotate: 10deg;
+        }
+      }
+  
+      & .mystery-ouija {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        bottom: 2rem;
+        left: 1%;
+        scale: 0;
+        rotate: 30deg;
+        transition: scale 450ms ease 750ms, rotate 350ms ease 750ms;
+        z-index: 1;
+
+        &:hover {
+          scale: 1.1;
+          rotate:15deg;
+        }
+      }
+  
+      & .mystery-crystal {
+        position: absolute;
+        width: 4.5rem;
+        height: 4.5rem;
+        bottom: 2rem;
+        right: 1%;
+        scale: 0;
+        transition: scale 450ms ease 0s, rotate 200ms ease 0s;
+        z-index: 1;
+
+        &:hover {
+          scale: 1.1;
+          rotate: -30deg;
+        }
+      }
+    }
+  }
+}
+
+@media (width >=80rem) {
+  section.mistery {
+
+    &:nth-child(2) {
+
+      & span {
+        font: 500 2rem/2 var(--ff);
+      }
+      & h2 {
+        max-width: 1136px;
+      }
+    }
+    
+    
+
+  }
+}
+
+@keyframes mistery {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

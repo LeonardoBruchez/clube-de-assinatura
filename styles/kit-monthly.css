@@ -1,0 +1,57 @@
+.kit-monthly {
+  max-width: 375px;
+  width: 100%;
+  & .title-monthly {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 8.5rem;
+
+    & img {
+      width: 1.25rem;
+      aspect-ratio: 1;
+    }
+
+    & h2 {
+      font: 700 1.5rem var(--ff);
+    }
+  }
+
+  & .title-group-monthly {
+    display: grid;
+    gap: 0.5rem;
+    & h3 {
+      font: 400 0.875rem/1.4 var(--ff);
+      text-align: center;
+    }
+  }
+
+  & .kit-wrapper {
+    position: relative;
+    & p {
+      font: 400 0.625rem var(--ff);
+    }
+
+    .pin {
+      width: 74.89px;
+      height: 85.4px;
+    }
+
+    .book {
+      width: 157.19px;
+      height: 207.68px;
+    }
+
+    .book-yellow {
+      width: 58.4px;
+      height: 180.92px;
+    }
+
+    .book-purple {
+      width: 57.89px;
+      height: 180.41px;
+    }
+  }
+  
+}
