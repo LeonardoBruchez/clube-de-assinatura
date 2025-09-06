@@ -1,0 +1,107 @@
+section.pricing {
+  margin-top: 4rem;
+  & .title-pricing {
+    text-align: center;
+    & h2 {
+      font: 700 1.5rem var(--ff);
+    }
+  }
+
+  & .monthly-wrapper {
+    margin: auto;
+    background-color: var(--shape-base);
+    width: 17rem;
+    height: 25rem;
+    border-radius: 24px;
+    outline: 1px solid var(--shape-stroke);
+
+
+    & >div:nth-child(1) {
+      padding: 2rem 2rem 0 2rem;
+    }
+    & h3 {
+      font: 700 1rem var(--ff);
+      color: var(--blue-light);
+      margin-bottom: 1.5rem;
+    }
+
+    & .price-month {
+      display: grid;
+      gap: 0.5rem;
+      & h2 {
+        font: 700 2.5rem var(--ff);
+
+        & small {
+          font: 700 1rem var(--ff);
+        }
+      }
+
+      & span {
+        font: 400 0.875rem/1.4 var(--ff);
+        color: var(--text-label);
+      }
+    }
+    & .details-month {
+      & ul{
+        padding: 5.187rem 1rem 1.5rem 2rem;
+        display: grid;
+        gap: 1rem;
+        list-style-type: none;
+      }
+
+      & ul li {
+        position: relative;
+        padding-left: 25px;
+        display: grid;
+        font: 400 0.75rem/1.4 var(--ff);
+        color: var(--text-body);
+      }
+
+      & ul li::before {
+        content: "";
+        background-image: url(../assets/icons/star-blue.svg);
+        background-size: 100%;
+        width: 0.875rem;
+        height: 0.875rem;
+        position: absolute;
+        left: 0;
+      }
+      & a {
+        text-decoration: none;
+        color: inherit;
+        background-color: var(--blue-dark);
+        margin: 0rem 2rem 1.75rem 2rem;
+        display: block;
+        text-align: center;
+        padding-block: 0.75rem;
+        border-radius: 0.5rem;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          clip-path: circle(0%);
+          width: 100%;
+          height: 100%;
+          transition: clip-path 400ms ease-in;
+          background-color: var(--blue-mid);
+          left: 0px;
+          top: 0;
+          border-radius: 0.5rem;
+        }
+        
+        &:hover::before {
+          clip-path: circle(100%);
+        }
+      }
+    }
+  }
+}
+
+@media (width >=80rem ) {
+  section.pricing {
+    margin-top: 30rem;
+  }
+}

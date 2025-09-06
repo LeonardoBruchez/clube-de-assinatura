@@ -1,6 +1,8 @@
 .kit-monthly {
   max-width: 375px;
   width: 100%;
+  height: 100vh;
+  margin: auto;
   & .title-monthly {
     align-items: center;
     display: flex;
@@ -29,29 +31,304 @@
 
   & .kit-wrapper {
     position: relative;
-    & p {
-      font: 400 0.625rem var(--ff);
+    max-width: 375px;
+    margin-top: 70px;
+    width: 100%;
+    padding-block: 150px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    & img {
+      position: absolute;
     }
 
-    .pin {
+    & p {
+      font: 400 0.625rem var(--ff);
+      position: absolute;
+    }
+
+    
+
+    & img[src*="pin"] {
       width: 74.89px;
       height: 85.4px;
     }
 
-    .book {
+    & img[src*="book"] {
       width: 157.19px;
       height: 207.68px;
+      right: 130px;
+      z-index: 1;
     }
 
-    .book-yellow {
+    & img[src*="yellow"] {
       width: 58.4px;
       height: 180.92px;
+      z-index: 0;
     }
 
-    .book-purple {
+    & img[src*="purple"] {
       width: 57.89px;
       height: 180.41px;
+      z-index: -1;
+    }
+
+    
+  }
+}
+
+@keyframes first-text {
+  100% {
+    transform: translate(-130px,-130px);
+  }
+}
+
+@keyframes vector-left {
+  100% {
+    transform: translate(-117px,-106px);
+  }
+}
+
+@keyframes second-text {
+  100% {
+    transform: translate(-140px,5px);
+  }
+}
+
+@keyframes vector-above {
+  100% {
+    transform: translate(-146px,40px);
+  }
+}
+
+@keyframes pin {
+  100% {
+    transform: translate(-114px,90px);
+  }
+}
+
+@keyframes yellow-book {
+  100% {
+    transform: translate(36px,-40px);
+    rotate: 8deg
+  }
+}
+
+@keyframes purple-book {
+  100% {
+    transform: translate(65px,-30px);
+    rotate: 19.5deg;
+  }
+}
+
+@keyframes vector-below {
+  100% {
+    transform: translate(87px,100px);
+  }
+}
+
+@keyframes third-text {
+  100% {
+    transform: translate(70px,140px);
+  }
+}
+
+@media (width <=64rem) {
+    .kit-wrapper {
+      & p:nth-child(1) {
+      animation: first-text 3s forwards;
+    }
+
+    & img[src*="seta-left"] {
+      animation: vector-left 3s forwards;
+    }
+
+    & p:nth-child(3) {
+      animation: second-text 3s forwards;
+    }
+
+    & img[src*="seta-above"] {
+      animation: vector-above 3s forwards;
+    }
+
+    & img[src*="pin"] {
+      animation:pin 3s forwards;
+    }
+
+    & img[src*="yellow"] {
+    animation: yellow-book 3s forwards;
+    }
+
+    & img[src*="purple"] {
+      animation: purple-book 3s forwards;
+    }
+
+
+    & img[src*="below"] {
+      animation: vector-below 3s forwards;
+    }
+
+    & p:nth-child(10) {
+      animation: third-text 3s forwards;
     }
   }
+    }
+    
+
+@media (width >=64rem) {
+  .kit-monthly {
+    max-width: 1200px;
+    margin: auto;
+    & .title-monthly {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 8.5rem;
+
+    & img {
+      width: 2rem;
+      aspect-ratio: 1;
+    }
+
+    & h2 {
+      font: 700 2rem var(--ff);
+    }
+  }
+
+  & .title-group-monthly {
+    max-width: 600px;
+    margin-inline: auto;
+    display: grid;
+    gap: 0.5rem;
+    & h3 {
+      font: 400 0.875rem/1.4 var(--ff);
+      text-align: center;
+    }
+  }
+    .kit-wrapper {
+      max-width: 600px;
+      margin-block: 0rem 17rem;
+      height: 1200px;
+      &:hover {
+        & p:nth-child(1) {
+          transform: translate(-430px,-360px);
+        }
+
+        & img[src*="seta-left"] {
+          transform: translate(-310px,-315px);
+        }
+
+        & img[src*="seta-above"] {
+          transform: translate(-400px,109px);
+        }
+
+        & p:nth-child(3) {
+          transform: translate(-400px,2px);
+        }
+
+        & img[src*="pin"] {
+          transform: translate(-320px,190px);
+          rotate: -9deg;
+        }
+
+        & img[src*="yellow"] {
+          transform: translate(95px,-110px);
+          rotate: 10deg;
+        }
+
+        & img[src*="purple"] {
+          transform: translate(210px,-50px);
+          rotate: 19deg;
+        }
+
+        & img[src*="seta-below"] {
+          transform: translate(310px,330px);
+        }
+
+        & p:nth-child(10) {
+          transform: translate(250px,420px);
+        }
+      } 
+
+      & img[src*="left"] {
+        width: 10.875rem;
+      }
+
+      & img[src*="above"] {
+        width: 6.5rem;
+      }
+
+      & img[src*="below"] {
+        width: 9.09rem;
+      }
+
+      & img {
+        position: absolute;
+        transition: 450ms;
+      }
+
+      & p {
+        font: 400 1rem var(--ff);
+        position: absolute;
+        transition: 450ms;
+      }
+      & img[src*="pin"] {
+        width: 222px;
+        height: 254px;
+        transition: 450ms;
+      }
+
+      & img[src*="book"] {
+        width: 467px;
+        height: 617px;
+        right: 15%;
+        z-index: 1;
+        margin-inline: auto;
+      }
+
+      & img[src*="yellow"] {
+        width: 172px;
+        height: 536px;
+        z-index: 0;
+      }
+
+      & img[src*="purple"] {
+        width: 172px;
+        height: 536px;
+        z-index: -1;
+      }
+    }
+  }
+
   
+
+
+}
+
+@media (width >=100rem) {
+  .kit-monthly {
+    & .title-monthly {
+      gap: 1.5rem;
+      & img {
+        width: 2.5rem;
+        aspect-ratio: 1;
+      }
+
+      & h2 {
+        font: 700 3rem var(--ff);
+      }
+    }
+    .title-group-monthly {
+      max-width: 900px;
+      gap: 1.3rem;
+      & h3 {
+        font: 400 1.5rem/1 var(--ff);
+      }
+    }
+  }
 }

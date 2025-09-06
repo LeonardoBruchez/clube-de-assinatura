@@ -83,7 +83,7 @@ section.mistery {
     &:nth-child(2) {
       margin: auto;
       margin-top: 34rem;
-      height: 100vh;
+      height: 70vh;
       
       
       & .mystery-container {
