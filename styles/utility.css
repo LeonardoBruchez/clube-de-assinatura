@@ -31,6 +31,10 @@ body {
   padding-inline: var(--px-base);
 }
 
+.icons-pricing-desktop {
+  display: none;
+}
+
 
 
 
@@ -71,5 +75,11 @@ body {
     background-color: var(--pink-low);
     z-index: -1;
   }
+  }
+}
+
+@media (width >=80rem) {
+  .icons-pricing-desktop {
+    display: initial;
   }
 }

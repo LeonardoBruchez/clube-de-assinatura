@@ -138,12 +138,8 @@ article.pricing {
     height: 25rem;
     border-radius: 24px;
 
-    &:hover {
-      background-color: var(--);
-    }
 
-
-    & >div:nth-child(1) {
+    & >div:nth-child(2) {
       padding: 2rem 2rem 0 2rem;
     }
     & h3 {
@@ -360,92 +356,173 @@ article.pricing {
         display: flex;
         margin: auto;
         gap: 0.8rem;
+        padding: 5rem;
+
+
       }
 
 
 
-      & .annual-wrapper {
-        & .details-annual {
-          & ul {
-            &::before {
-          content: "";
-          position: absolute;
-          bottom: -30%;
-          width: 100%;
-          height: 300px;
-          left: 97%;
-          filter: blur(400px);
-          background-color: var(--pink-low);
-        }
+    & .annual-wrapper {
+      & .details-annual {
+        & ul {
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            width: 100%;
+            height: 300px;
+            left: 97%;
+            filter: blur(400px);
+            background-color: var(--pink-low);
+          }
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -30%;
-          right: 97%;
-          width: 0.1%;
-          height: 0px;
-          filter: blur(400px);
-          background-color: var(--pink-low);
-        }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            right: 97%;
+            width: 0.1%;
+            height: 0px;
+            filter: blur(400px);
+            background-color: var(--pink-low);
           }
         }
       }
+    }
 
-      .monthly-wrapper {
-        transition: 450ms;
-        rotate: -8deg;
-        box-shadow: 0 0 0 transparent;
-        transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
+    
+
+    .monthly-wrapper {
+      transition: 450ms;
+      rotate: -8deg;
+      box-shadow: 0 0 0 transparent;
+      transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
+    }
+
+    .monthly-wrapper:hover {
+      transform: translatey(-5px);
+      z-index: 2;
+      box-shadow: 
+      0 0px 0px rgba(0, 0, 0, 0.6),
+      0 0 30px var(--shape-stroke);
+      outline: 0;
+      background-color: var(--shape-hover);
+
+      & >img:nth-child(1) {
+        transform: rotate(15deg);
+        transform: translate(-10px -10px);
+        }
+    }
+
+    & .semester-wrapper {
+      transition: 450ms;
+      z-index: 1;
+      box-shadow: 0 0 0 transparent;
+      transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
+      position: relative;
+
+      & >div:nth-child(2) {
+      padding: 2rem 2rem 0 2rem;
+    }
+    }
+
+    .semester-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+      0 0px 0px rgba(0, 0, 0, 0.6),
+      0 0 30px var(--shape-stroke);
+      transform: translateY(-5px);
+      outline: 0;
+    }
+
+    .annual-wrapper {
+      rotate: 8deg;
+      transition: 450ms;
+      box-shadow: 0 0 0 transparent;
+      transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
+    }
+
+    .annual-wrapper:hover {
+      transform: translateY(-5px);
+      z-index: 2;
+      box-shadow: 
+      0 0px 0px rgba(0, 0, 0, 0.6),
+      0 0 30px var(--shape-stroke);
+      transform: translateY(-5px);
+      outline: 0;
+      background-color: var(--shape-hover);
+    }
+
+
+    & .stars-monthly {
+      position: relative;
+
+      & >img:nth-child(1) {
+        width: 1.625rem;
+        height: 1.625rem;
+        position: absolute;
+        transition: rotate 450ms;
+        left: -56.64rem;
+        top: -14px;
       }
 
-      .monthly-wrapper:hover {
-        transform: translatey(-5px);
-        z-index: 2;
-        box-shadow: 
-        0 0px 0px rgba(0, 0, 0, 0.6),
-        0 0 30px var(--shape-stroke);
-        transform: translateY(-5px);
-        outline: 0;
-        background-color: var(--shape-hover);
+      & >img:nth-child(2) {
+        width: 0.816rem;
+        height: 0.816rem;
+        position: absolute;
+        left: -57rem;
+        top: 19px;
+        transition: rotate 450ms;
       }
 
-      & .semester-wrapper {
-        transition: 450ms;
-        z-index: 1;
-        box-shadow: 0 0 0 transparent;
-        transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
+    }
+
+    & section div:nth-child(1):hover ~ .stars-monthly img:first-child {
+      rotate: -15deg;
+    }
+
+    & section div:nth-child(1):hover ~ .stars-monthly img:nth-child(2) {
+      rotate: 15deg;
+    }
+
+    & .semester-wrapper {
+      & img:nth-child(1) {
+      position: absolute;
+      top: -3rem;
+      right: 42%;
+    }
+    }
+
+
+    & .stars-annual {
+      position: relative;
+
+      & >img:nth-child(1) {
+        position: absolute;
+        width: 1.451rem;
+        height: 1.451rem;
+        left: -6rem;
+        bottom: -30px;
+        transition: rotate 450ms;
       }
 
-      .semester-wrapper:hover {
-        transform: translateY(-5px);
-        box-shadow: 
-        0 0px 0px rgba(0, 0, 0, 0.6),
-        0 0 30px var(--shape-stroke);
-        transform: translateY(-5px);
-        outline: 0;
+      & >img:nth-child(2) {
+        position: absolute;
+        width: 0.7031rem;
+        height: 0.7031rem;
+        bottom: -35px;
+        left: -7.9rem;
+        transition: rotate 450ms;
       }
+    }
+    & section div:nth-child(3):hover ~ .stars-annual img:first-child {
+      rotate: -15deg;
+    }
 
-      .annual-wrapper {
-        rotate: 8deg;
-        transition: 450ms;
-        box-shadow: 0 0 0 transparent;
-        transition: box-shadow 450ms ease, transform 0.3s ease, outline 0.1ms;
-      }
-
-      .annual-wrapper:hover {
-        transform: translateY(-5px);
-        z-index: 2;
-        box-shadow: 
-        0 0px 0px rgba(0, 0, 0, 0.6),
-        0 0 30px var(--shape-stroke);
-        transform: translateY(-5px);
-        outline: 0;
-        background-color: var(--shape-hover);
-      }
-
-      
-
+    & section div:nth-child(3):hover ~ .stars-annual img:nth-child(2) {
+      rotate: 15deg;
+    }
 
   }
 }
