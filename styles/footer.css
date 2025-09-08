@@ -1,0 +1,235 @@
+footer {
+  width: 100%;
+  background-image: url(../assets/images/book-trace-baground-mobile.svg);
+  background-position: top;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+  min-height: 415px;
+
+  & h3 {
+    font: 700 1rem var(--ff);
+    color: var(--text-body);
+  }
+
+  & a {
+    font: 500 0.875rem var(--ff);
+    color: var(--blue-light);
+  }
+
+  & >div:nth-child(1) {
+    margin-inline: auto;
+    display: grid;
+    padding-bottom: 2.375rem;
+
+    & >div:nth-child(1) {
+      padding-block: 50px 10px;
+      display: flex;
+      justify-content: center;
+    }
+    
+
+    & .social-medias {
+      border-top: 1px solid var(--shape-stroke);
+      padding-top: 0.75rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.8875rem;
+      & img {
+        margin: 0.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    & .nav-links {
+      padding-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      
+      & a {
+        color: var(--blue-light);
+      }
+      
+
+      & .contents {
+        display: grid;
+        gap: 1.65rem;
+
+        & div:nth-child(2) {
+          display: grid;
+          gap: 1rem;
+        }
+      }
+
+      & .Help {
+        display: grid;
+        gap: 1.65rem;
+
+        & div:nth-child(2) {
+          display: grid;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width >=43.75rem) and (width <=64rem) {
+  footer {
+    & > div {
+      & >div:nth-child(1) {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
+
+@media (width >= 64rem) {
+  footer {
+      display: grid;
+      justify-content: center;
+      background-image: url(../assets/images/book-trace-background.png);
+
+      & > div:nth-child(1) {
+          display: none;
+      }
+
+      & > div:nth-child(2) {
+          display: grid;
+          width: 80rem;
+          grid-template-columns: 50% 50%;
+          justify-items: center;
+          align-items: center;
+
+          & h3 {
+              font: 700 1rem var(--ff);
+          }
+
+          & a {
+              font: 500 0.875rem var(--ff);
+          }
+
+          & > .footer-medias {
+              display: grid;
+              gap: 0.75rem;
+
+              & > div:nth-child(1) {
+                  display: grid;
+                  justify-content: center;
+              }
+
+              & .social-medias {
+                  display: flex;
+                  gap: 0.5rem;
+
+                  /* ESTILO CORRIGIDO PARA AS MÍDIAS SOCIAIS */
+                  a {
+                      display: grid;
+                      place-items: center;
+                      width: 2.5rem;
+                      height: 2.5rem;
+                      border-radius: 100%;
+                      background-size: 1.5rem;
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      transition: background-color 450ms ease, background-image 450ms ease;
+                  }
+
+                  a:hover {
+                      background-color: var(--shape-stroke);
+                  }
+
+                  /* Definindo as imagens padrão e de hover para cada link */
+                  a:nth-child(1) {
+                      background-image: url(../assets/icons/instagram.svg);
+                  }
+                  a:nth-child(1):hover {
+                      background-image: url(../assets/icons/instagram-white.svg);
+                  }
+                  
+                  a:nth-child(2) {
+                      background-image: url(../assets/icons/twitter.svg);
+                  }
+                  a:nth-child(2):hover {
+                      background-image: url(../assets/icons/twitter-white.svg);
+                  }
+                  
+                  a:nth-child(3) {
+                      background-image: url(../assets/icons/facebook.svg);
+                  }
+                  a:nth-child(3):hover {
+                      background-image: url(../assets/icons/facebook-white.svg);
+                  }
+
+                  a:nth-child(4) {
+                      background-image: url(../assets/icons/discord.svg);
+                  }
+                  a:nth-child(4):hover {
+                      background-image: url(../assets/icons/discord-white.svg);
+                  }
+
+                  a:nth-child(5) {
+                      background-image: url(../assets/icons/whatsapp.svg);
+                  }
+                  a:nth-child(5):hover {
+                      background-image: url(../assets/icons/whatsapp-white.svg);
+                  }
+                  
+                  a:nth-child(6) {
+                      background-image: url(../assets/icons/mail.svg);
+                  }
+                  a:nth-child(6):hover {
+                      background-image: url(../assets/icons/mail-white.svg);
+                  }
+              }
+          }
+
+          & > .footer-nav {
+              display: flex;
+              gap: 3.5rem;
+
+              & .contents {
+                display: grid;
+                gap: 1.25rem;
+              
+                & > div {
+                  display: grid;
+                  gap: 1rem;
+                  & a {
+                    padding-block: 0.25rem;
+                    /* Linha corrigida */
+                    transition: color 450ms ease;
+              
+                    &:hover {
+                      color: var(--text-body);
+                    }
+                  }
+                }
+              }
+
+              & .help {
+                display: grid;
+                gap: 1.25rem;
+              
+                & > div {
+                  display: grid;
+                  gap: 1rem;
+                  & a {
+                    padding-block: 0.25rem;
+                    /* Linha corrigida */
+                    transition: color 450ms ease;
+              
+                    &:hover {
+                      color: var(--text-body);
+                    }
+                  }
+                }
+              }
+  
+              
+          }
+      }
+  }
+}

@@ -15,7 +15,7 @@ article.pricing {
       height: 300px;
       left: 65%;
       filter: blur(450px);
-      background-color: var(--pink-low);
+      background-color: var(--shape-stroke);
     }
 
     &::after {
@@ -26,7 +26,7 @@ article.pricing {
       width: 60%;
       height: 300px;
       filter: blur(450px);
-      background-color: var(--pink-low);
+      background-color: var(--shape-hover);
     }
     & h2 {
       font: 700 1.5rem var(--ff);
@@ -228,6 +228,7 @@ article.pricing {
     height: 25rem;
     border-radius: 24px;
     outline: 1px solid var(--shape-stroke);
+    margin-bottom:10rem ;
 
 
     & >div:nth-child(1) {
@@ -346,11 +347,7 @@ article.pricing {
 
 @media (width >=80rem ) {
   article.pricing {
-    margin-top: 20rem;
-
-      & .title-pricing {
-        margin-bottom: 200px;
-      }
+    margin-top: 40rem;
 
       & section {
         display: flex;
@@ -502,8 +499,8 @@ article.pricing {
         position: absolute;
         width: 1.451rem;
         height: 1.451rem;
-        left: -6rem;
-        bottom: -30px;
+        left: -2rem;
+        bottom: 120px;
         transition: rotate 450ms;
       }
 
@@ -511,8 +508,8 @@ article.pricing {
         position: absolute;
         width: 0.7031rem;
         height: 0.7031rem;
-        bottom: -35px;
-        left: -7.9rem;
+        bottom: 120px;
+        left: -3.9rem;
         transition: rotate 450ms;
       }
     }

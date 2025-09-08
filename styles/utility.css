@@ -7,6 +7,8 @@ body {
     height: 60%;
     filter: blur(200px);
     background-color: var(--pink-low);
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -57,21 +59,24 @@ body {
     &::before {
     content: "";
     position: absolute;
-    bottom: -76%;
-    width: 100%;
-    height: 10%;
+    bottom: 2%;
+    width: 50%;
+    height: 13%;
+    left:24%;
     filter: blur(4000px);
-    background-color: var(--pink-low);
+    background-color: var(--shape-stroke);
+    pointer-events: none;
+    z-index: -1;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 20%;
+    bottom: 40%;
     width: 50%;
     height: 20%;
     right: 25%;
-    filter: blur(400px);
+    filter: blur(450px);
     background-color: var(--pink-low);
     z-index: -1;
   }
