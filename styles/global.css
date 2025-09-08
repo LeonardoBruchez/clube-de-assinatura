@@ -47,12 +47,12 @@ html {
 
 
 body {
-  font: var(--subtitle);
+  font-family: var(--ff);
   background-color: var(--shape-background);
   color: var(--text);
 }
 
-a {
+ a {
   appearance: none;
   text-decoration: none;
   color: inherit;
@@ -60,21 +60,21 @@ a {
 
 
 
-@media (min-width >=64rem) {
+@media (min-width: 64rem) {
   :root {
     --max-width:80rem;
     margin-inline: auto;
   }
 }
 
-@media (width >=37.5rem) {
+@media (min-width: 37.5rem) {
   :root {
     --py-base:2.5rem;
     --px-sm:4rem;
   } 
 }
 
-@media (width >=80em) {
+@media (min-width: 80em) {
   :root {
     --gap:2rem;
     --py-sm:6rem;
